@@ -100,7 +100,7 @@ def subscriber():
 
 
 def data_handler(message):
-    url = "http://127.0.0.1:8090/message"
+    url = "http://127.0.0.1:8000/message"
     data = {'data': message['data']}
     http_request = httpclient.HTTPRequest(url, method="POST",
                                           body=json.dumps(data))
@@ -112,6 +112,6 @@ if __name__ == "__main__":
     subscriber()
 
     app = Application()
-    app.listen(8090)
+    app.listen(8000)
 
     tornado.ioloop.IOLoop.current().start()

@@ -13,8 +13,7 @@
         <ul id='messages'>
         </ul>
         <script>
-            var ws = new WebSocket("ws://localhost:8090/pigeon");
-        
+            var ws = new WebSocket("ws://localhost:8000/broad");
             ws.onmessage = function(event) {
                 document.getElementById('messages').innerHTML = event.data
             };
